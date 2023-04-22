@@ -1,0 +1,58 @@
+{
+	"name": "mergely-react",
+	"version": "0.0.0",
+	"description": "Mergely component for React.",
+	"main": "lib/mergely.js",
+	"files": [
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md",
+		"doc/*",
+		"lib/*"
+	],
+	"keywords": [
+		"mergely",
+		"merge",
+		"diff",
+		"myers"
+	],
+	"author": {
+		"name": "Jamie Peabody",
+		"email": "jamie.peabody@gmail.com",
+		"url": "http://mergely.com"
+	},
+	"license": "(GPL-3.0 OR LGPL-3.0 OR MPL-1.1 OR SEE LICENSE IN LICENSE)",
+	"release": {
+		"branches": [
+			"main",
+			"next"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.21.4",
+		"@babel/preset-env": "^7.21.4",
+		"@babel/preset-react": "^7.18.6",
+		"@commitlint/cli": "^17.6.1",
+		"@commitlint/config-conventional": "^17.6.1",
+		"babel-loader": "^9.1.2",
+		"css-loader": "^6.7.3",
+		"file-loader": "^6.2.0",
+		"html-loader": "^4.2.0",
+		"html-webpack-plugin": "^5.5.1",
+		"husky": "^8.0.3",
+		"mergely": "^5.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"semantic-release": "^21.0.1",
+		"style-loader": "^3.3.2",
+		"webpack": "^5.80.0",
+		"webpack-cli": "^5.0.1",
+		"webpack-dev-server": "^4.13.3"
+	},
+	"scripts": {
+		"prepare": "husky install",
+		"build": "rm -rf lib && webpack --mode production --config webpack.config.js",
+		"start": "webpack serve --mode development --config webpack.config.js",
+		"test": "echo OK"
+	}
+}
