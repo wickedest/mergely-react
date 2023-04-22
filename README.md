@@ -13,7 +13,12 @@ npm install mergely-react
 ## Example
 
 ```jsx
-<MergelyView height="400px" ignorews />
+<MergelyView
+    height="400px"
+    ignorews
+    lhs="I like apples!"
+    rhs="I like bananas!"
+/>
 ```
 
 ## Configuration

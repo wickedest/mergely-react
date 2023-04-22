@@ -6,6 +6,8 @@ export default function App() {
 	return(
 		<MergelyView
 			height='200px'
+			lhs="I like apples!"
+			rhs="I like bananas!"
 			onChanged={() => {console.log('changed')}}
 			onResized={() => {console.log('resized')}}
 			onUpdated={() => {console.log('updated')}}
