@@ -25,7 +25,11 @@ export default function MergelyView({
 	sidebar = true,
 	vpcolor = 'rgba(0,0,200,0.5)',
 	viewport = false,
-	wrap_lines = false
+	wrap_lines = false,
+	onChanged = null,
+	onResized = null,
+	onUpdated = null,
+	onInit = null
 }) {
 	let mergelyRef = useRef(null);
 	const id = _mergelyGlobalId++;
@@ -34,7 +38,6 @@ export default function MergelyView({
 	useEffect(() => {
 		const selector = `#mergely-${id}`;
 		mergelyRef.current = new Mergely(selector, {
-			_debug: true,
 			autoupdate,
 			bgcolor,
 			change_timeout,
@@ -56,6 +59,19 @@ export default function MergelyView({
 			viewport,
 			wrap_lines
 		});
+
+		if (onChanged) {
+			mergelyRef.current.on('changed', onChanged);
+		}
+		if (onResized) {
+			mergelyRef.current.on('resized', onResized);
+		}
+		if (onUpdated) {
+			mergelyRef.current.on('updated', onUpdated);
+		}
+		if (onInit) {
+			mergelyRef.current.once('updated', onInit);
+		}
 
 		return () => {
 			mergelyRef.current.unbind();

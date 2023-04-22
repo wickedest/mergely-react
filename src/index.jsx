@@ -4,7 +4,13 @@ import MergelyView from './mergely.jsx';
 
 export default function App() {
 	return(
-		<MergelyView height='200px' />
+		<MergelyView
+			height='200px'
+			onChanged={() => {console.log('changed')}}
+			onResized={() => {console.log('resized')}}
+			onUpdated={() => {console.log('updated')}}
+			onInit={() => {console.log('initialized')}}
+		/>
 	);
 }
 
