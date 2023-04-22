@@ -25,6 +25,8 @@
 	"release": {
 		"branches": [
 			"main",
+			"alpha",
+			"beta",
 			"next"
 		]
 	},
