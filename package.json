@@ -22,14 +22,6 @@
 		"url": "http://mergely.com"
 	},
 	"license": "(GPL-3.0 OR LGPL-3.0 OR MPL-1.1 OR SEE LICENSE IN LICENSE)",
-	"release": {
-		"branches": [
-			"main",
-			"alpha",
-			"beta",
-			"next"
-		]
-	},
 	"devDependencies": {
 		"@babel/core": "^7.21.4",
 		"@babel/preset-env": "^7.21.4",
