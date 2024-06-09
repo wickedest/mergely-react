@@ -13,17 +13,30 @@ npm install mergely-react
 ## Example
 
 ```jsx
-<MergelyView
-    height="400px"
-    ignorews
-    lhs="I like apples!"
-    rhs="I like bananas!"
-/>
+import MergelyView from 'mergely-react'
+import './App.css'
+
+function App() {
+  return (
+    <>
+      <MergelyView
+          height="100%"
+          ignorews
+          lhs="I like apples!"
+          rhs="I like bananas!"
+        />
+    </>
+  )
+}
+
+export default App
 ```
 
 ## Configuration
 
-All [configuration options](https://mergely.com/doc#options) can be found on https://mergely.com/doc. In addition to those options, the following can be configured:
+All [configuration options](https://mergely.com/doc#options) can be found on https://mergely.com/doc.
+
+In addition to the standard Mergely options, the following can be configured:
 
 |Option|Type|Default value|Description|
 |------|----|-------------|-----------|
@@ -32,7 +45,6 @@ All [configuration options](https://mergely.com/doc#options) can be found on htt
 |**onInit**|`function ()`| |Triggered once, after editor is resized and initial document changes are rendered.|
 |**onResized**|`function ()`| |Triggered after the editor is resized.|
 |**onUpdated**|`function ()`| |Triggered after the editor finishes rendering. For example, text updates, options, or scroll events may trigger renders. |
-
 
 ## License
 
