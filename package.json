@@ -1,6 +1,6 @@
 {
 	"name": "mergely-react",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"description": "Mergely component for React.",
 	"main": "lib/mergely.js",
 	"files": [

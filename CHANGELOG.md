@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/wickedest/mergely-react/compare/v1.0.3...v1.1.0) (2024-06-09)
+
+
+### Features
+
+* react and react-dom are now peerDependencies and not bundled ([4ba6c4a](https://github.com/wickedest/mergely-react/commit/4ba6c4af09f4bc30a549a9bcafbfff88263ba248))
+
 ## [1.0.3](https://github.com/wickedest/mergely-react/compare/v1.0.2...v1.0.3) (2023-04-23)
 
 
